@@ -1,49 +1,5 @@
 var budgetController = (function(){
-    
-    var Expenses = function (id, description, value, date) {
-        this.id = id;
-        this.description = description;
-        this.value = value;
-        this.date = date;
-    }
-
-    var Income = function (id, description, value, date) {
-        this.id = id;
-        this.description = description;
-        this.value = value;
-        this.date = date;
-    }
-
-    var data = {
-        allItems: {
-            expn: [],
-            inc: []
-        },
-        totals: {
-            expn: 0,
-            inc: 0
-        }
-    };
-
-    return {
-        addItem: function (type, des, val, date) {
-            var newItem, ID;
-            ID = 0;
-
-            if(type === 'exp'){
-                newItem = new Expenses(ID, des, val, date);
-            }else if(type == 'inc'){
-                newItem = new Income(ID, des, val, date);
-            }
-
-
-        }
-        
-
-
-    }
-
-
+    //
 })();
 
 var UIController = (function() {
@@ -108,11 +64,10 @@ var controller = (function(budgetCtrl, UICtrl){
     return {
         init: function(){
             console.log('started');
-            setupEventListeners();
+            
         }
     }
     
+    
 
 })(budgetController, UIController);
-
-controller.init();

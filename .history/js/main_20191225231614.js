@@ -25,24 +25,6 @@ var budgetController = (function(){
         }
     };
 
-    return {
-        addItem: function (type, des, val, date) {
-            var newItem, ID;
-            ID = 0;
-
-            if(type === 'exp'){
-                newItem = new Expenses(ID, des, val, date);
-            }else if(type == 'inc'){
-                newItem = new Income(ID, des, val, date);
-            }
-
-
-        }
-        
-
-
-    }
-
 
 })();
 
